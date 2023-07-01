@@ -13,9 +13,9 @@ import model.Customer;
 
 public class TCPCustomerListClientApp {
 	public static void main(String[] args) {
-
+		System.out.println("Running TCPCustomerListClientApp...");
 		try {
-
+			
 			// Server information
 			int serverPortNo = 8018;
 			InetAddress serverAddress = InetAddress.getLocalHost();
@@ -29,7 +29,7 @@ public class TCPCustomerListClientApp {
 
 			// 3. Read respond from the server - cast the object
 			List<Customer> customers = (List<Customer>) ois.readObject();
-
+			System.out.println("Customer List: ");
 			// 4. Process response - display the object
 			//Arrange the customer alphabetically 
 			customers.sort(Comparator.comparing(Customer::getName));

@@ -16,7 +16,7 @@ public class TCPCustomerClientApp {
 			System.out.println("\tExecuting TCPCustomerClientApp");
 			
 			// Server information
-			int serverPortNo = 8077;
+			int serverPortNo = 8017;
 			InetAddress serverAddress = InetAddress.getLocalHost();
 			
 			// 1. Connect to remote machine
@@ -27,9 +27,10 @@ public class TCPCustomerClientApp {
 			DataOutputStream dos = new DataOutputStream(os);
 			
 			// 2. Send request to the server
-			String customerName = "Jack";
-			dos.writeUTF(customerName);
-			System.out.println("\tRequesting customer name  " + customerName + "\n");
+			String[] customerName = {"Jack","Will"};
+			for(int count=0;count<2;count++) {
+			dos.writeUTF(customerName[count]);
+			System.out.println("\tRequesting customer name  " + customerName[count] + "\n");
 			
 			// Create stream to receive response from the server
 			InputStream is = socket.getInputStream();
@@ -45,7 +46,7 @@ public class TCPCustomerClientApp {
 			System.out.println("\tName: " + customer.getName());
 			
 			
-			
+			}
 			
 			
 			

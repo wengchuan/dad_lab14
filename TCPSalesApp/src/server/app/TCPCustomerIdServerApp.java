@@ -34,7 +34,7 @@ public class TCPCustomerIdServerApp {
 				// Request - customerName - string
 				InputStream is = clientSocket.getInputStream();
 				DataInputStream dis = new DataInputStream(is);
-				while (true) {
+				for(int count =0;count<5; count++){
 					// Read product id from client
 					int customerId = dis.readInt();
 					System.out.println("\tRequest for customer id: " + customerId);

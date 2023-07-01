@@ -13,7 +13,7 @@ import server.controller.CustomerDataManager;
 public class TCPCustomerServerApp {
 
 	public static void main(String[] args) {
-		int portNo = 8077;
+		int portNo = 8017;
 
 		CustomerDataManager customerDataManager = new CustomerDataManager();
 		System.out.println("\n\tExecuting TCPCustomerServerApp");
@@ -35,10 +35,10 @@ public class TCPCustomerServerApp {
 				// Request - customerName - string
 				InputStream is = clientSocket.getInputStream();
 				DataInputStream dis = new DataInputStream(is);
-
+				for(int count=0;count<2;count++) {
 				// Read product id from client
 				String customerName = dis.readUTF();
-				System.out.println("\tRequest for customer name: " + customerName);
+				System.out.println("\n\tRequest for customer name: " + customerName);
 
 				// Get product
 				Customer customer = customerDataManager.searchCustomerByName(customerName);
@@ -49,7 +49,7 @@ public class TCPCustomerServerApp {
 				System.out.print("\tSending pruduct: " + customer.getCustomerId() + " " + customer.getName());
 				oos.writeObject(customer);
 			
-
+				}
 			}
 
 		} catch (Exception ex) {
