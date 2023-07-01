@@ -50,7 +50,7 @@ public class TCPSummationClientApp {
 			int resultMulti = dis.readInt();
 			// 5. Further processing - display the result
 			System.out.println("\tSending to the server: " + number1 + ", " 
-					+ number2+number3);
+					+ number2+", "+number3);
 			System.out.println("\tReceiving from server Summation: " + resultSum);
 			System.out.println("\tReceiving from server Summation: " + resultMulti);
 			// Close all the closable

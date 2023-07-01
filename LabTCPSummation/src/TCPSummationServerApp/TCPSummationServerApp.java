@@ -42,7 +42,7 @@ public class TCPSummationServerApp {
 				int number2 = dis.readInt();
 				int number3 = dis.readInt();
 				System.out.println("\tFrom client: " + number1 + ", " 
-						+ number2);
+						+ number2+ ", " +number3);
 				// From client: 101, 2001 
 				
 				
