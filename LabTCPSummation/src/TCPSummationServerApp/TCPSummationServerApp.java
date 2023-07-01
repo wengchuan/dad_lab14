@@ -22,7 +22,7 @@ public class TCPSummationServerApp {
 		try {
 			
 			// 1. Bind to a port
-			int portNo = 8087;
+			int portNo = 8082;
 			ServerSocket serverSocket = new ServerSocket(portNo);
 			
 			NumberCalculator numberCalculator  = new NumberCalculator();

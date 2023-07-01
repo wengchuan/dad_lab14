@@ -30,7 +30,7 @@ public class TCPSummationClientApp {
 		try {
 			
 			// 1. Define server information
-			int serverPortNo = 8087;
+			int serverPortNo = 8082;
 			InetAddress serverAddress = InetAddress.getLocalHost();
 			
 			// 2. Bind to the server, request for connection
